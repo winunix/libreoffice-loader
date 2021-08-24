@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sleep 36
+pkill soffice

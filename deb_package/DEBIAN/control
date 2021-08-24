@@ -1,0 +1,11 @@
+Package: libreoffice-loader
+Version: 0.0.1
+Installed-Size: 710
+Maintainer: ailtonbsj <ailton.ifce@gmail.com>
+Section: utils
+Architecture: all
+Priority: optional
+Depends: libreoffice
+Homepage: https://github.com/winunix/libreoffice-loader
+Description: Run libreoffice on LXQt Start.
+ Auto initialize the libreoffice on LXQt for improve performance.

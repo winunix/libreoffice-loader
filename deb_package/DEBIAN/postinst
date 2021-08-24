@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Get Names of users
+cat /etc/passwd | grep '/home/' | grep -v 'cups\|syslog\|mysql\|mongodb' | cut -d':' -f1 >/tmp/homes.list
+
+runByUsers() {
+    # $1 is default folder of user
+    # $2 is name of user
+    runuser -l $2 -c "cp /etc/skel/.config/autostart/libreoffice-loader.desktop $1/.config/autostart/libreoffice-loader.desktop"
+}
+
+while read USUARIO; do
+    if [ -d /home/$USUARIO ]; then
+        runByUsers "/home/$USUARIO" "$USUARIO"
+    fi
+done </tmp/homes.list
+# runByUsers "/etc/skel" "root"

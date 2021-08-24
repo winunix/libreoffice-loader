@@ -1,0 +1,6 @@
+#!/bin/bash
+
+/usr/share/soffice-loader/libredown &
+libreoffice --calc --headless
+aplay /usr/share/soffice-loader/ring.wav
+
